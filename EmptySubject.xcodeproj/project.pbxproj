@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		E233949723F026EA004D73FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233949623F026EA004D73FF /* AppDelegate.swift */; };
 		E233949923F026EA004D73FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233949823F026EA004D73FF /* SceneDelegate.swift */; };
-		E233949B23F026EA004D73FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233949A23F026EA004D73FF /* ViewController.swift */; };
 		E233949E23F026EA004D73FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E233949C23F026EA004D73FF /* Main.storyboard */; };
 		E23394A123F026EA004D73FF /* EmptySubject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E233949F23F026EA004D73FF /* EmptySubject.xcdatamodeld */; };
 		E23394A323F026ED004D73FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23394A223F026ED004D73FF /* Assets.xcassets */; };
 		E23394A623F026ED004D73FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23394A423F026ED004D73FF /* LaunchScreen.storyboard */; };
 		E23394F523F02EDD004D73FF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23394F423F02EDD004D73FF /* Alamofire.framework */; };
 		E23394F623F02EDD004D73FF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E23394F423F02EDD004D73FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E23394FD23F0307B004D73FF /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23394FC23F0307B004D73FF /* MealModel.swift */; };
+		E23394FF23F030E7004D73FF /* CategoryMealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23394FE23F030E7004D73FF /* CategoryMealItem.swift */; };
+		E233950223F03129004D73FF /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233950123F03129004D73FF /* Networking.swift */; };
+		E233950423F033B2004D73FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233950323F033B2004D73FF /* MainViewController.swift */; };
+		E233950723F0362A004D73FF /* MealCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233950523F0362A004D73FF /* MealCategoryCell.swift */; };
+		E233950823F0362A004D73FF /* MealCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E233950623F0362A004D73FF /* MealCategoryCell.xib */; };
+		E233950A23F098CF004D73FF /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233950923F098CF004D73FF /* DescriptionViewController.swift */; };
+		E233950C23F09F47004D73FF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E233950B23F09F46004D73FF /* SnapKit.framework */; };
+		E233950D23F09F47004D73FF /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E233950B23F09F46004D73FF /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +34,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E23394F623F02EDD004D73FF /* Alamofire.framework in Embed Frameworks */,
+				E233950D23F09F47004D73FF /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,13 +45,20 @@
 		E233949323F026EA004D73FF /* EmptySubject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmptySubject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E233949623F026EA004D73FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E233949823F026EA004D73FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E233949A23F026EA004D73FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E233949D23F026EA004D73FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E23394A023F026EA004D73FF /* EmptySubject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmptySubject.xcdatamodel; sourceTree = "<group>"; };
 		E23394A223F026ED004D73FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E23394A523F026ED004D73FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E23394A723F026ED004D73FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23394F423F02EDD004D73FF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E23394FC23F0307B004D73FF /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		E23394FE23F030E7004D73FF /* CategoryMealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMealItem.swift; sourceTree = "<group>"; };
+		E233950123F03129004D73FF /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		E233950323F033B2004D73FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E233950523F0362A004D73FF /* MealCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryCell.swift; sourceTree = "<group>"; };
+		E233950623F0362A004D73FF /* MealCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCategoryCell.xib; sourceTree = "<group>"; };
+		E233950923F098CF004D73FF /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		E233950B23F09F46004D73FF /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E23394F523F02EDD004D73FF /* Alamofire.framework in Frameworks */,
+				E233950C23F09F47004D73FF /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +96,10 @@
 			children = (
 				E233949623F026EA004D73FF /* AppDelegate.swift */,
 				E233949823F026EA004D73FF /* SceneDelegate.swift */,
-				E233949A23F026EA004D73FF /* ViewController.swift */,
-				E233949C23F026EA004D73FF /* Main.storyboard */,
+				E23394FA23F03061004D73FF /* View */,
+				E23394FB23F03066004D73FF /* Controller */,
+				E23394F923F03059004D73FF /* Model */,
 				E23394A223F026ED004D73FF /* Assets.xcassets */,
-				E23394A423F026ED004D73FF /* LaunchScreen.storyboard */,
 				E23394A723F026ED004D73FF /* Info.plist */,
 				E233949F23F026EA004D73FF /* EmptySubject.xcdatamodeld */,
 			);
@@ -92,9 +109,40 @@
 		E23394F323F02EDD004D73FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E233950B23F09F46004D73FF /* SnapKit.framework */,
 				E23394F423F02EDD004D73FF /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E23394F923F03059004D73FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E233950123F03129004D73FF /* Networking.swift */,
+				E23394FC23F0307B004D73FF /* MealModel.swift */,
+				E23394FE23F030E7004D73FF /* CategoryMealItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E23394FA23F03061004D73FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E233949C23F026EA004D73FF /* Main.storyboard */,
+				E233950523F0362A004D73FF /* MealCategoryCell.swift */,
+				E23394A423F026ED004D73FF /* LaunchScreen.storyboard */,
+				E233950623F0362A004D73FF /* MealCategoryCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E23394FB23F03066004D73FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E233950323F033B2004D73FF /* MainViewController.swift */,
+				E233950923F098CF004D73FF /* DescriptionViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +207,7 @@
 			files = (
 				E23394A623F026ED004D73FF /* LaunchScreen.storyboard in Resources */,
 				E23394A323F026ED004D73FF /* Assets.xcassets in Resources */,
+				E233950823F0362A004D73FF /* MealCategoryCell.xib in Resources */,
 				E233949E23F026EA004D73FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +224,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -191,10 +241,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E233950423F033B2004D73FF /* MainViewController.swift in Sources */,
+				E23394FD23F0307B004D73FF /* MealModel.swift in Sources */,
 				E23394A123F026EA004D73FF /* EmptySubject.xcdatamodeld in Sources */,
-				E233949B23F026EA004D73FF /* ViewController.swift in Sources */,
+				E23394FF23F030E7004D73FF /* CategoryMealItem.swift in Sources */,
 				E233949723F026EA004D73FF /* AppDelegate.swift in Sources */,
 				E233949923F026EA004D73FF /* SceneDelegate.swift in Sources */,
+				E233950A23F098CF004D73FF /* DescriptionViewController.swift in Sources */,
+				E233950723F0362A004D73FF /* MealCategoryCell.swift in Sources */,
+				E233950223F03129004D73FF /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
