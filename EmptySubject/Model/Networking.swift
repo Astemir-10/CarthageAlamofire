@@ -34,13 +34,28 @@ class Networking {
         }
     }
     
+    // I did a validation check and fixed rresponse data
     
-    
-    func loadImageCategory(link: String, completion: @escaping (UIImage) -> ()) {
-            request(link).responseJSON { (response) in
+    func loadImage(link: String, completion: @escaping (UIImage) -> ()) {
+        request(link).validate().responseData { (response) in
+            
+            response.result.ifSuccess {
                 guard let data = response.data else {return}
-                guard let categoryImage = UIImage(data: data) else {return}
-                completion(categoryImage)
+                guard let image = UIImage(data: data) else {return}
+                completion(image)
+            }
+//            if response.result.isSuccess {
+//                response.result.ifSuccess {
+//                    guard let data = response.data else {return}
+//                    guard let image = UIImage(data: data) else {return}
+//                    completion(image)
+//                }
+//            } else if response.result.isFailure {
+//                response.result.ifFailure {
+//                    let error = response.result.error! as NSError
+//                    print("Error: \(error) \(error.userInfo)")
+//                }
+//            }
         }
     }
     

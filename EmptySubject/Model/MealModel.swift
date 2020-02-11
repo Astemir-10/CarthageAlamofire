@@ -9,5 +9,5 @@
 import Foundation
 
 struct MealModel: Codable {
-    var categories: [CategoryMealItem]?
+    let categories: [CategoryMealItem]?
 }
