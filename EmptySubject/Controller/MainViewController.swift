@@ -73,10 +73,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 cell.viewContent.backgroundColor = .white
                 cell.categoryTextLabel.text = catigories[indexPath.row].strCategory
                 networking.loadImage(link: mealModel.categories![indexPath.row].strCategoryThumb!) { (image) in
-                    
                     DispatchQueue.main.async {
                         cell.categoryImage.image = image
-                        collectionView.reloadData()
                         
                     }
                 }
